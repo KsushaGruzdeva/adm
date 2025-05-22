@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список услуг</title>
+</head>
+<body>
+<h1>Список услуг</h1>
+<!--<a href="/cars/create">Добавить новую машину</a>-->
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Название</th>
+    <th>Цена</th>
+<!--    <th>Действия</th>-->
+  </tr>
+  <tr th:each="attendance : ${attendances}">
+    <td th:text="${attendance.id}"></td>
+    <td th:text="${attendance.name}"></td>
+    <td th:text="${attendance.price}"></td>
+<!--    <td>-->
+<!--      <a th:href="@{cars/edit/{id}(id=${car.id})}">Редактировать</a>-->
+<!--      <form th:action="@{cars/delete/{id}(id=${car.id})}" method="post" style="display:inline;">-->
+<!--        <button type="submit">Удалить</button>-->
+<!--      </form>-->
+<!--    </td>-->
+  </tr>
+</table>
+</body>
+</html>

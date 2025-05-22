@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Список салонов</title>
+</head>
+<body>
+<h1>Список салонов</h1>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Название</th>
+    <th>Адресс</th>
+    <th>Почта</th>
+  </tr>
+  <tr th:each="beautySalon : ${beautySalons}">
+    <td th:text="${beautySalon.id}"></td>
+    <td th:text="${beautySalon.name}"></td>
+    <td th:text="${beautySalon.address}"></td>
+    <td th:text="${beautySalon.email}"></td>
+  </tr>
+</table>
+</body>
+</html>
